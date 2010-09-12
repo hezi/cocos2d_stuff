@@ -1,0 +1,7 @@
+HZActionableMaskTransition allows you to create trasition for an alpha mask.
+the mask can be manipulated using an Action to create cool effects.
+
+Actions currently supported are those who affect Position, Scale and rotation.
+
+Creating a new Transition is easy as subclassing HZActionableMaskTransition 
+and setting the proper Mask and Action, just take a look at MyMaskTransition.m for an example.
