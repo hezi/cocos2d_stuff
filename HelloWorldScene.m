@@ -56,18 +56,6 @@
 {
 	CGSize size = [[CCDirector sharedDirector] winSize];
 
-	HZMaskSprite *vomMask = [HZMaskSprite spriteWithFile:@"VomDissolveMask.png"];
-	[vomMask setScale:0.5];
-	vomMask.position = ccp(size.width/2, size.height/2);
-
-	CCIntervalAction *scale = [CCEaseIn actionWithAction:[CCScaleBy actionWithDuration:3 scale:2.0f] rate:5];
-	//CCIntervalAction *move = [CCEaseIn actionWithAction:[CCMoveTo actionWithDuration:3 position:ccp(size.width, -250*2.0)] rate:5];
-	//CCIntervalAction *rotate = [CCRotateBy actionWithDuration:3 angle:10];
-	
-	
-	//CCIntervalAction * action = [CCSpawn actions:rotate,scale, move, nil];
-									  
-	//[[CCDirector sharedDirector] replaceScene: [HZActionableMaskTransition transitionWithDuration:1.0f scene:[SecondScene scene] mask:vomMask andAction:scale]];
 	[[CCDirector sharedDirector] replaceScene:[MyMaskTransition transitionWithDuration:5 scene:[SecondScene scene]]];
 	[self unschedule:@selector(transitionToSecondFrame:)];
 }

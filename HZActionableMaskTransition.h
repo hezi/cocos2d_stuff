@@ -24,9 +24,6 @@
 	CCRenderTexture *outTexture_;	
 }
 
-+(id) transitionWithDuration:(ccTime)t scene:(CCScene*)s mask:(HZMaskSprite*)maskSprite andAction:(CCAction*)maskAction;
--(id) initWithDuration:(ccTime)t scene:(CCScene*)s mask:(HZMaskSprite*)maskSprite andAction:(CCAction*)maskAction;
-
 -(CCIntervalAction*)maskActionWithDuration:(ccTime)t;
 -(HZMaskSprite*)maskSprite;
 
